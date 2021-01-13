@@ -15,10 +15,11 @@ public class MedianOfTwoSortedArrays0004 {
 
         int[] nums1 = new int[]{1, 5, 6, 9};
         int[] nums2 = new int[]{4, 10, 34, 100, 980};
-        System.out.println("getMedianOfTwoSortedArrays(nums1, nums2) = " + getMedianOfTwoSortedArrays(nums1, nums2));
-
-
-        System.out.println("getMedianOfTwoSortedArrays2(nums1,nums2) = " + getMedianOfTwoSortedArrays2(nums1, nums2));
+        // System.out.println("getMedianOfTwoSortedArrays(nums1, nums2) = " + getMedianOfTwoSortedArrays(nums1, nums2));
+        // System.out.println("getMedianOfTwoSortedArrays2(nums1,nums2) = " + getMedianOfTwoSortedArrays2(nums1, nums2));
+        for (int i = 1; i < 10; i++) {
+            System.out.println("getKth1(nums1, nums2,i) = " + getKth1(nums1, nums2, i));
+        }
     }
 
     /**
@@ -142,4 +143,42 @@ public class MedianOfTwoSortedArrays0004 {
             return getKth(nums1, i + 1, end1, nums2, start2, end2, k - (i - start1 + 1));
         }
     }
+
+
+    /**
+     * 二分查找 第 k 个数
+     * @param nums1
+     * @param nums2
+     * @param k
+     * @return
+     */
+    private static int getKth1(int[] nums1, int[] nums2, int k) {
+        int index1 = 0;
+        int index2 = 0;
+        int length1 = nums1.length;
+        int length2 = nums2.length;
+        while (true) {
+            if (index1 == length1) {
+                return nums2[index2 + k - 1];
+            }
+            if (index2 == length2) {
+                return nums1[index1 + k - 1];
+            }
+            if (k == 1) {
+                return Math.min(nums1[index1], nums2[index2]);
+            }
+
+            int len = k / 2;
+            int newIndex1 = Math.min(index1 + len, length1) - 1;
+            int newIndex2 = Math.min(index2 + len, length2) - 1;
+            if (nums1[newIndex1] <= nums2[newIndex2]) {
+                k -= (newIndex1 - index1 + 1);
+                index1 = newIndex1 + 1;
+            } else {
+                k -= (newIndex2 - index2 + 1);
+                index2 = newIndex2 + 1;
+            }
+        }
+    }
+
 }
