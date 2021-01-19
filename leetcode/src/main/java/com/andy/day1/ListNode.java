@@ -1,6 +1,4 @@
-package com.andy.dayone;
-
-import java.util.Objects;
+package com.andy.day1;
 
 public class ListNode {
 

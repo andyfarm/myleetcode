@@ -1,6 +1,6 @@
-package com.andy.daythree;
+package com.andy.day3;
 
-import com.andy.dayone.ListNode;
+import com.andy.day1.ListNode;
 
 import java.util.HashSet;
 import java.util.Set;

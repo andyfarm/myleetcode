@@ -1,4 +1,4 @@
-package com.andy.daytwo;
+package com.andy.day2;
 
 import java.util.Arrays;
 

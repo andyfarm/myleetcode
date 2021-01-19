@@ -1,4 +1,4 @@
-package com.andy.daythree;
+package com.andy.day3;
 
 /**
  * reverse int if out of max int  return 0

@@ -1,4 +1,4 @@
-package com.andy.daythree;
+package com.andy.day3;
 
 import java.util.HashMap;
 import java.util.Map;

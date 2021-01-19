@@ -1,4 +1,4 @@
-package com.andy.dayone;
+package com.andy.day1;
 
 /**
  * 链表

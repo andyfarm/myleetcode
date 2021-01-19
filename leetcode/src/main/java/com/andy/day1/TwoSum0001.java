@@ -1,6 +1,4 @@
-package com.andy.dayone;
-
-import jdk.internal.org.objectweb.asm.tree.MultiANewArrayInsnNode;
+package com.andy.day1;
 
 import java.util.HashMap;
 import java.util.Map;
