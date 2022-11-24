@@ -1,7 +1,5 @@
 package com.andy.day9;
 
-import com.sun.org.apache.bcel.internal.generic.IFGE;
-
 import java.util.Arrays;
 
 /**

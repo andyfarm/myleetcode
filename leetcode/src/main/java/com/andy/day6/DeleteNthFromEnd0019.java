@@ -2,10 +2,8 @@ package com.andy.day6;
 
 import com.andy.day1.ListNode;
 
-import javax.naming.event.NamingListener;
 import java.util.Deque;
 import java.util.LinkedList;
-import java.util.Stack;
 
 /**
  * 删除链表的倒数第 n 个节点   节点从1开始

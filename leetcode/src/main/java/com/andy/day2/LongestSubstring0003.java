@@ -1,6 +1,8 @@
 package com.andy.day2;
 
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Map;
 import java.util.Set;
 
 /**
@@ -33,6 +35,24 @@ public class LongestSubstring0003 {
             ans = Math.max(ans, rk - i + 1);
         }
         return ans;
+
+
+    }
+
+    public static int getLongestSub1(String s) {
+        Map<Character, Integer> map = new HashMap<>();
+        int n = s.length();
+        int max = 0;
+        int start = 0, end = 0;
+        for (int i = 0; i < n; ++i) {
+            if (map.containsKey(s.charAt(i))) {
+                start = Math.max(map.get(s.charAt(i)), start);
+            }
+            max = Math.max(max, end - start + 1);
+            end++;
+            map.put(s.charAt(i), i+1);
+        }
+        return max;
 
 
     }

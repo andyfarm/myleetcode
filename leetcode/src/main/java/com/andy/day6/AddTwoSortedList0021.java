@@ -1,17 +1,12 @@
 package com.andy.day6;
 
 import com.andy.day1.ListNode;
-import sun.net.sdp.SdpSupport;
 
 /**
  * 合并两个有序链表
  * @author win
  */
 public class AddTwoSortedList0021 {
-
-    public static void main(String[] args) {
-        addMergeTwoList(null, null);
-    }
 
     /**
      * 迭代
